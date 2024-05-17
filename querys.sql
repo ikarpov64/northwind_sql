@@ -23,7 +23,7 @@ JOIN (
 ) qty on pr.product_id = qty.product_id;
 
 -- 5. Выявить ФИО сотрудника, у которого сумма всех заказов самая маленькая.
-SELECT emp.last_name, emp.first_name, title_of_courtesy, 
+SELECT last_name, first_name, title_of_courtesy, 
 	CAST(tot_sum.sum AS numeric(15,2)) AS "Сумма заказов"
 FROM public.employees emp
 JOIN (
